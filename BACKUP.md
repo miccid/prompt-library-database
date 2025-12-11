@@ -19,17 +19,17 @@ The easiest way to backup your database is to simply copy the `prompts.db` file:
 
 **On Linux/macOS:**
 ```bash
-cp prompts.db prompts.db.backup.$(date +%Y%m%d_%H%M%S)
+cp prompts.db ./database-backups/prompts.db.backup.$(date +%Y%m%d_%H%M%S)
 ```
 
 **On Windows (Command Prompt):**
 ```bash
-copy prompts.db prompts.db.backup.%date:~-4%%date:~-10,2%%date:~-7,2%
+copy prompts.db ./database-backups/prompts.db.backup.%date:~-4%%date:~-10,2%%date:~-7,2%
 ```
 
 **On Windows (PowerShell):**
 ```powershell
-Copy-Item prompts.db "prompts.db.backup.$(Get-Date -Format 'yyyyMMdd_HHmmss')"
+Copy-Item prompts.db "./database-backups/prompts.db.backup.$(Get-Date -Format 'yyyyMMdd_HHmmss')"
 ```
 
 This creates a timestamped backup file like: `prompts.db.backup.20251211_143022`

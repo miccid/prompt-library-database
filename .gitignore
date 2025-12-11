@@ -27,7 +27,7 @@ __pycache__/
 *.db.bak
 
 # Backup directories
-backups/
+database-backups/
 py_backup/
 
 # OS
