@@ -342,7 +342,14 @@ The application uses environment variables for configuration. You can set these 
 
 ### Creating a `.env` File
 
-Create a file named `.env` in the project root directory with your desired configuration:
+The easiest way to set up environment variables is to use the provided `.env.example` template:
+
+**Step 1:** Copy the example file
+```bash
+cp .env.example .env
+```
+
+**Step 2:** Edit the `.env` file with your desired configuration:
 
 ```env
 USERNAME=your_username
@@ -350,9 +357,14 @@ PASSWORD=your_secure_password
 PROMPT_DB_FILE=prompts.db
 ```
 
+**Step 3:** Save the file
+
 The application will automatically load these values on startup.
 
-> **Security Note:** Never commit the `.env` file to version control. It's already included in `.gitignore`.
+> **Security Note:**
+> - Never commit the `.env` file to version control. It's already included in `.gitignore`.
+> - The `.env.example` file is committed to show the structure and required variables.
+> - Always keep sensitive credentials (passwords, etc.) out of version control.
 
 ---
 
@@ -391,7 +403,8 @@ Press `Ctrl+C` in your terminal to stop the Streamlit server.
 prompt-library-database/
 ├── app.py                    # Main Streamlit application
 ├── requirements.txt          # Python package dependencies
-├── .env                      # Environment variables (create this)
+├── .env.example             # Environment variables template (copy to .env)
+├── .env                      # Environment variables (created from .env.example - not committed)
 ├── .gitignore               # Git ignore rules
 ├── Dockerfile               # Docker configuration
 ├── docker-compose.yml       # Docker Compose configuration
@@ -403,7 +416,8 @@ prompt-library-database/
 
 - **app.py**: The main Python application containing all Streamlit UI components and database logic
 - **requirements.txt**: Lists all Python packages needed (Streamlit, clipboard support, etc.)
-- **.env**: Configuration file for sensitive data (usernames, passwords)
+- **.env.example**: Template file showing required environment variables (committed to repository)
+- **.env**: Your local configuration file with sensitive data (NOT committed - created from .env.example)
 - **prompts.db**: Your local SQLite database where all prompts are stored
 - **Dockerfile & docker-compose.yml**: Configuration for running the app in Docker containers
 
