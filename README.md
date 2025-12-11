@@ -10,42 +10,42 @@ A professional Streamlit application for managing a comprehensive library of AI 
 
 ## Table of Contents
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-  - [Setup on Linux](#setup-on-linux)
-  - [Setup on macOS](#setup-on-macos)
-  - [Setup on Windows](#setup-on-windows)
-- [Docker Setup](#docker-setup)
-- [Environment Variables](#environment-variables)
-- [Running the Application](#running-the-application)
-- [File Structure](#file-structure)
-- [Troubleshooting](#troubleshooting)
+- [✨ Features](#features)
+- [📋 Prerequisites](#prerequisites)
+- [💻 Installation & Setup](#installation--setup)
+  - [🐧 Setup on Linux](#setup-on-linux)
+  - [🍎 Setup on macOS](#setup-on-macos)
+  - [🪟 Setup on Windows](#setup-on-windows)
+- [🐳 Docker Setup](#docker-setup)
+- [🔧 Environment Variables](#environment-variables)
+- [🚀 Running the Application](#running-the-application)
+- [📁 File Structure](#file-structure)
+- [🆘 Troubleshooting](#troubleshooting)
 
 ---
 
-## Features
+## ✨ Features
 
-- **Browse & Search**: View all prompts in your library with real-time search functionality
-- **Add New Prompts**: Create new prompts with structured data and custom tags
-- **Edit Prompts**: Modify existing prompts to refine and improve them over time
-- **Delete Prompts**: Remove prompts you no longer need
-- **Advanced Tagging System**: Organize prompts with categorized tags for better organization
-- **Copy to Clipboard**: Quickly copy prompt text to your clipboard with a single click
-- **Authentication**: Secure access with username and password protection
-- **Local-First Storage**: All data stored locally in an SQLite database for privacy and reliability
-- **Professional UI**: Clean, intuitive web interface built with Streamlit
+- 🔍 **Browse & Search**: View all prompts in your library with real-time search functionality
+- ➕ **Add New Prompts**: Create new prompts with structured data and custom tags
+- ✏️ **Edit Prompts**: Modify existing prompts to refine and improve them over time
+- 🗑️ **Delete Prompts**: Remove prompts you no longer need
+- 🏷️ **Advanced Tagging System**: Organize prompts with categorized tags for better organization
+- 📋 **Copy to Clipboard**: Quickly copy prompt text to your clipboard with a single click
+- 🔐 **Authentication**: Secure access with username and password protection
+- 💾 **Local-First Storage**: All data stored locally in an SQLite database for privacy and reliability
+- 🎨 **Professional UI**: Clean, intuitive web interface built with Streamlit
 
 ---
 
-## Prerequisites
+## 📋 Prerequisites
 
 Before you begin, make sure you have the following installed on your system:
 
-- **Python 3.8 or higher** ([Download Python](https://www.python.org/downloads/))
-- **Git** (optional, but recommended) ([Download Git](https://git-scm.com/))
-- A terminal application (Terminal on Mac/Linux, Command Prompt or PowerShell on Windows)
-- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- 🐍 **Python 3.8 or higher** ([Download Python](https://www.python.org/downloads/))
+- 🔗 **Git** (optional, but recommended) ([Download Git](https://git-scm.com/))
+- 💻 A terminal application (Terminal on Mac/Linux, Command Prompt or PowerShell on Windows)
+- 🌐 A modern web browser (Chrome, Firefox, Safari, or Edge)
 
 To check if Python is installed, open your terminal and run:
 ```bash
@@ -54,11 +54,11 @@ python --version
 
 ---
 
-## Installation & Setup
+## 💻 Installation & Setup
 
 Follow the instructions for your operating system below.
 
-### Setup on Linux
+### 🐧 Setup on Linux
 
 #### Step 1: Navigate to Your Project Directory
 
@@ -132,7 +132,7 @@ Your browser should automatically open to `http://localhost:8501`. If not, copy 
 
 ---
 
-### Setup on macOS
+### 🍎 Setup on macOS
 
 #### Step 1: Navigate to Your Project Directory
 
@@ -200,7 +200,7 @@ Your browser should automatically open to `http://localhost:8501`.
 
 ---
 
-### Setup on Windows
+### 🪟 Setup on Windows
 
 #### Step 1: Open Command Prompt or PowerShell
 
@@ -275,7 +275,7 @@ Your browser should automatically open to `http://localhost:8501`. If not, copy 
 
 ---
 
-## Docker Setup
+## 🐳 Docker Setup
 
 If you prefer to run the application in Docker, follow these steps:
 
@@ -328,7 +328,7 @@ docker-compose down
 
 ---
 
-## Environment Variables
+## 🔧 Environment Variables
 
 The application uses environment variables for configuration. You can set these in a `.env` file or as system environment variables.
 
@@ -356,7 +356,7 @@ The application will automatically load these values on startup.
 
 ---
 
-## Running the Application
+## 🚀 Running the Application
 
 ### Standard Method (with activated virtual environment)
 
@@ -385,7 +385,7 @@ Press `Ctrl+C` in your terminal to stop the Streamlit server.
 
 ---
 
-## File Structure
+## 📁 File Structure
 
 ```
 prompt-library-database/
@@ -409,9 +409,9 @@ prompt-library-database/
 
 ---
 
-## Troubleshooting
+## 🆘 Troubleshooting
 
-### Issue: "Python is not recognized as an internal or external command"
+### ❌ Issue: "Python is not recognized as an internal or external command"
 
 **Solution (Windows):**
 - Python is not installed or not added to your system PATH
@@ -423,14 +423,14 @@ prompt-library-database/
 - Try `python3` instead of `python`
 - Install Python 3 using Homebrew (Mac): `brew install python3`
 
-### Issue: "No module named 'streamlit'"
+### ❌ Issue: "No module named 'streamlit'"
 
 **Solution:**
 - Make sure your virtual environment is activated (you should see `(.venv)` in your terminal)
 - Run `pip install -r requirements.txt` again
 - If issues persist, try: `pip install --upgrade streamlit`
 
-### Issue: Virtual environment is not activating
+### ❌ Issue: Virtual environment is not activating
 
 **Windows:**
 - If using PowerShell and you get an execution policy error, run:
@@ -443,7 +443,7 @@ prompt-library-database/
 - Ensure you're in the correct project directory
 - Try: `source .venv/bin/activate`
 
-### Issue: "Address already in use" (port 8501)
+### ⚠️ Issue: "Address already in use" (port 8501)
 
 **Solution:**
 - Another application is using port 8501
@@ -452,7 +452,7 @@ prompt-library-database/
   streamlit run app.py --server.port 8502
   ```
 
-### Issue: Database file (prompts.db) is not created
+### ⚠️ Issue: Database file (prompts.db) is not created
 
 **Solution:**
 - The app creates the database automatically on first run
@@ -460,7 +460,7 @@ prompt-library-database/
 - Check that you're running the app from the correct directory
 - If using Docker, ensure the volume is mounted correctly: `-v $(pwd):/app`
 
-### Issue: Cannot access the application at localhost:8501
+### ❌ Issue: Cannot access the application at localhost:8501
 
 **Solution:**
 - Make sure Streamlit is running (check terminal for the "Streamlit is running" message)
@@ -468,7 +468,7 @@ prompt-library-database/
 - Check if a firewall is blocking port 8501
 - Restart the Streamlit application
 
-### Issue: Login fails with default credentials
+### 🔑 Issue: Login fails with default credentials
 
 **Solution:**
 - Default credentials are: username `admin`, password `admin`
@@ -476,7 +476,7 @@ prompt-library-database/
 - Ensure the `.env` file is in the project root directory
 - Restart the Streamlit application after modifying `.env`
 
-### Issue: Docker container won't start
+### 🐳 Issue: Docker container won't start
 
 **Solution:**
 - Ensure Docker is running (Docker Desktop on Windows/Mac should be open)
@@ -485,7 +485,7 @@ prompt-library-database/
 - View logs: `docker logs <container-id>`
 - Rebuild the image: `docker build -t prompt-library-database .`
 
-### Issue: Clipboard copy feature not working
+### 📋 Issue: Clipboard copy feature not working
 
 **Solution:**
 - The clipboard feature requires the `st-copy-to-clipboard` package
@@ -493,7 +493,7 @@ prompt-library-database/
 - Some browsers may block clipboard access—this is a browser security feature
 - Restart the application and try again
 
-### Need More Help?
+### 💡 Need More Help?
 
 - Check the Streamlit documentation: [https://docs.streamlit.io](https://docs.streamlit.io)
 - Review the main application file (`app.py`) for configuration details
