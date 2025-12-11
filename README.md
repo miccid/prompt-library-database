@@ -418,8 +418,16 @@ prompt-library-database/
 - **requirements.txt**: Lists all Python packages needed (Streamlit, clipboard support, etc.)
 - **.env.example**: Template file showing required environment variables (committed to repository)
 - **.env**: Your local configuration file with sensitive data (NOT committed - created from .env.example)
-- **prompts.db**: Your local SQLite database where all prompts are stored
+- **prompts.db**: Your local SQLite database where all prompts are stored (NOT committed - kept private)
 - **Dockerfile & docker-compose.yml**: Configuration for running the app in Docker containers
+
+### Important: Data Privacy 🔒
+
+The `prompts.db` file contains your private prompts and is **never committed to version control**:
+- It's automatically created when you first run the app
+- It remains on your local machine only
+- The `.gitignore` file prevents it from being accidentally pushed to GitHub
+- Each user/deployment will have their own separate database file
 
 ---
 
