@@ -20,6 +20,7 @@ A professional Streamlit application for managing a comprehensive library of AI 
 - [🔧 Environment Variables](#environment-variables)
 - [🚀 Running the Application](#running-the-application)
 - [📁 File Structure](#file-structure)
+- [💾 Backup & Data Protection](#backup--data-protection)
 - [🆘 Troubleshooting](#troubleshooting)
 
 ---
@@ -428,6 +429,55 @@ The `prompts.db` file contains your private prompts and is **never committed to 
 - It remains on your local machine only
 - The `.gitignore` file prevents it from being accidentally pushed to GitHub
 - Each user/deployment will have their own separate database file
+
+---
+
+## 💾 Backup & Data Protection
+
+Your prompts are valuable! Here are several ways to protect them:
+
+### Quick Backup
+
+The simplest way to backup your database:
+
+**Linux/macOS:**
+```bash
+cp prompts.db prompts.db.backup.$(date +%Y%m%d_%H%M%S)
+```
+
+**Windows (PowerShell):**
+```powershell
+Copy-Item prompts.db "prompts.db.backup.$(Get-Date -Format 'yyyyMMdd_HHmmss')"
+```
+
+### Recommended Backup Strategy
+
+1. **Local Backups:** Keep timestamped backups in a `backups/` folder
+2. **Cloud Backups:** Upload to Google Drive, Dropbox, or AWS S3
+3. **External Drive:** Regular copies to an external hard drive
+
+### Automated Backups
+
+See the [BACKUP.md](./BACKUP.md) file for:
+- ✅ Automated backup scripts (Linux/macOS and Windows)
+- ✅ Scheduled backups using Cron or Task Scheduler
+- ✅ Cloud storage integration
+- ✅ Restoration procedures
+- ✅ Best practices and the 3-2-1 backup rule
+
+**Quick Start:**
+```bash
+# Create a timestamped backup
+cp prompts.db backups/prompts.db.backup.$(date +%Y%m%d_%H%M%S)
+```
+
+### In Case of Data Loss
+
+1. **Stop the app:** `Ctrl+C` in your terminal
+2. **Restore from backup:** `cp backups/prompts.db.backup.YYYYMMDD_HHMMSS prompts.db`
+3. **Restart the app:** `streamlit run app.py`
+
+For detailed backup instructions, see [BACKUP.md](./BACKUP.md).
 
 ---
 
