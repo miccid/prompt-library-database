@@ -1,0 +1,14 @@
+services:
+  prompt-library:
+    build: .
+    container_name: prompt-library-app
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - USERNAME=${APP_USERNAME}
+      - PASSWORD=${APP_PASSWORD}
+    labels:
+      - com.centurylinklabs.watchtower.enable=false  
