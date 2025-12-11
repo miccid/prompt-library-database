@@ -22,12 +22,13 @@ __pycache__/
 *.swo
 *~
 
+# Database files
+*.db
+*.db.bak
+
 # Backup directories
 backups/
 py_backup/
-
-# Database backups
-*.db.bak
 
 # OS
 .DS_Store
